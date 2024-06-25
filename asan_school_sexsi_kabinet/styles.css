@@ -9,6 +9,7 @@
 body{
     margin-left: 1.7%;
     background-color: #F0F3F4;
+    z-index: 2;
 }
 
 .whole_page{
@@ -291,13 +292,46 @@ i{
     width: 20%;
     text-align: center;
 }
-@media(max-width:500px){
-    .whole_page{
-        display: flex;
-        flex-direction: column;
-    }
-    .right_side{
-        display: flex;
-        flex-direction: column;
-    }
+
+.knowledge_module{
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    background-color:white;
+    width: fit-content;
+    position: absolute;
+    top: 17rem;
+    left: 36rem;
+}
+.module_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.module_header h1{
+    color: #042B8C;
+    font-size: 1.5rem;
+}
+.module_header i{
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+}
+.module_title{
+    margin-top: 1rem;
+}
+
+.knowledge_module input{
+    width: 22rem;
+    height: 3.5rem;
+    border: none;
+    background-color: #F0F3F4;
+}
+.knowledge_module button{
+    margin-top: 1rem;
+    background-color: #042B8C;
+    border: none;
+    width: 22rem;
+    height: 3.5rem;
+    color: white;
 }

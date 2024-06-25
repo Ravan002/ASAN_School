@@ -101,9 +101,9 @@
                     <div class="contacts">
                         <div class="contacts_head">
                             <p class="section_title">Əlaqə məlumatları</p>
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <i class="fa-solid fa-chevron-down" id="icon"></i>
                         </div>
-                        <div class="contacts_body">
+                        <div class="contacts_body" id="contactBody">
                             <div class="contacts_left_body">
                                 <div class="contacts_part">
                                     <p class="contacts_subtitle">
@@ -176,7 +176,7 @@
                         <div class="add_knowledge">
                             <p class="knowledge_name">Kompüter biliyi</p>
                             <p class="knowledge_level">Səviyyə</p>
-                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-plus" id="addKnowledge"></i>
                         </div>
                         <div class="added_know">
                             <p class="knowledge_name">Microsoft office</p>
@@ -231,5 +231,17 @@
             </main>
         </div>
     </div>
+    <div class="knowledge_module" id="knowledgeModule">
+        <div class="module_header">
+            <h1>Dil biliyi əlave et</h1>
+            <i class="fa-solid fa-xmark" id="exitModule"></i>
+        </div>
+        <p class="module_title">Dil</p>
+        <input type="text">
+        <p class="module_title">Səviyyə</p>
+        <input type="text">
+        <button>Təsdiqlə</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
