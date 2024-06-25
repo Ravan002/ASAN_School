@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <div class="whole_page">
@@ -35,7 +36,7 @@
                 </header>
             </div>
             
-            <main>
+            <main class="main_part">
                 <div class="left_main">
                     <div class="personal_info">
                         <div class="personal_head">
@@ -231,17 +232,19 @@
             </main>
         </div>
     </div>
-    <div class="knowledge_module" id="knowledgeModule">
-        <div class="module_header">
-            <h1>Dil biliyi əlave et</h1>
-            <i class="fa-solid fa-xmark" id="exitModule"></i>
+    <dialog>
+        <div class="knowledge_module" id="knowledgeModule">
+            <div class="module_header">
+                <h1>Dil biliyi əlave et</h1>
+                <i class="fa-solid fa-xmark" id="exitModule"></i>
+            </div>
+            <p class="module_title">Dil</p>
+            <input type="text">
+            <p class="module_title">Səviyyə</p>
+            <input type="text">
+            <button>Təsdiqlə</button>
         </div>
-        <p class="module_title">Dil</p>
-        <input type="text">
-        <p class="module_title">Səviyyə</p>
-        <input type="text">
-        <button>Təsdiqlə</button>
-    </div>
+      </dialog>
     <script src="script.js"></script>
 </body>
 </html>

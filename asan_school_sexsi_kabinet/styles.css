@@ -9,7 +9,10 @@
 body{
     margin-left: 1.7%;
     background-color: #F0F3F4;
-    z-index: 2;
+    
+}
+.overflow_hidden{
+    overflow: hidden;
 }
 
 .whole_page{
@@ -92,19 +95,23 @@ header{
 .settings i{
     font-size: 1.5rem;
 }
-main{
+.main_part{
     display: flex;
+    flex-wrap: wrap;
+   
 
 }
 .left_main{
     margin-right: 1.7%;
-    width: 45rem;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .right_main{
-    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .personal_info{
@@ -294,14 +301,10 @@ i{
 }
 
 .knowledge_module{
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
     background-color:white;
-    width: fit-content;
-    position: absolute;
-    top: 17rem;
-    left: 36rem;
 }
 .module_header{
     display: flex;
@@ -334,4 +337,43 @@ i{
     width: 22rem;
     height: 3.5rem;
     color: white;
+}
+
+/* .module_background.visible {
+    display: flex;
+    background-color: rgba(45, 46, 46, 0.7)
+}
+
+.module_background{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      black,
+      black,
+      black,
+      black
+    );
+    opacity: 0.5;
+  }
+
+dialog{
+    position: absolute;
+    top: 17rem;
+    left: 36rem;
+}
+
+
+@media (max-width : 800px) {
+    .main_part {
+        flex-direction: column;
+    }
 }

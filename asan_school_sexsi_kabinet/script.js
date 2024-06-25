@@ -13,23 +13,33 @@ document.getElementById('icon').addEventListener('click', function() {
     }
 });
 
+const body = document.querySelector('body');
+// document.getElementById('addKnowledge').addEventListener('click', function() {
 
-document.getElementById('addKnowledge').addEventListener('click', function() {
-    const info = document.getElementById('knowledgeModule');
+//     info.classList.add("visible")
+//     document.body.style.overflow = hidden
+// });
 
-    if (info.style.display === 'none') {
-        info.style.display = 'flex';
-    } 
-    else {
-        info.style.display = 'none';
-    }
+
+// document.getElementById('exitModule').addEventListener('click', function() {
+  
+//     info.classList.remove("visible")
+// });
+
+
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("#addKnowledge");
+const closeButton = document.querySelector("#exitModule");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+  body.classList.add("overflow_hidden");
+
 });
 
-
-document.getElementById('exitModule').addEventListener('click', function() {
-    const info = document.getElementById('knowledgeModule');
-    
-    if (info.style.display === 'flex') {
-        info.style.display = 'none';
-    } 
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+  body.classList.remove("overflow_hidden");
 });
