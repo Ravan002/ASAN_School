@@ -29,19 +29,33 @@ body{
     background-color: #042B8C;
     height: 49rem;
     margin-right: 1.7%;
-    width: 15%;
+    width: 15rem;
+    overflow-x: hidden;
+
+}
+.close_part{
+    display: none;
+    
+}
+.close_part i{
+    font-size: 1.5rem;
+}
+.close_part span{
+    color: white;
+}
+.sideBar.on_mobile{
+    width: 15rem;
+    z-index: 10;
 }
 
 .sideBar p{
     color: white;
     letter-spacing: .05rem;
 }
-
 .right_side{
     display: flex;
     flex-direction: column;
     margin-right: 1.7%;
-    width: 82%;
 }   
 
 header{
@@ -61,6 +75,17 @@ header{
     border-radius: 0;
 }
 
+.header_left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_left i{
+    display: none;
+    color: #042B8C;
+    font-size: 1.5rem;
+}
 .header_right{
     display: flex;
     justify-content: center;
@@ -139,7 +164,7 @@ header{
 .personal_body{
     display: flex;
     justify-content: space-between;
-    padding-right: 8rem;
+    padding-right: 4rem;
 }
 .personal_subtitles{
     margin-top: 0.75rem;
@@ -372,8 +397,26 @@ dialog{
 }
 
 
-@media (max-width : 800px) {
+
+@media (max-width : 1000px) {
     .main_part {
         flex-direction: column;
+    }
+
+    .header_left i{
+        display: block;
+    }
+    .sideBar{
+        width: 0;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        border-radius: 0;
+    }
+    .close_part{
+        display: flex;
+    }
+    .left_main{
+        margin-right: 0;
     }
 }

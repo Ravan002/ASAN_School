@@ -30,7 +30,6 @@ const body = document.querySelector('body');
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#addKnowledge");
 const closeButton = document.querySelector("#exitModule");
-
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
   dialog.showModal();
@@ -43,3 +42,17 @@ closeButton.addEventListener("click", () => {
   dialog.close();
   body.classList.remove("overflow_hidden");
 });
+
+const sideBar= document.querySelector('aside');
+document.getElementById('menuIcon').addEventListener('click', function(){
+
+  sideBar.classList.add("on_mobile");
+  body.classList.add('overflow_hidden');
+});
+document.getElementById('closeMenu').addEventListener('click', function(){
+
+  sideBar.classList.remove("on_mobile");
+  body.classList.remove('overflow_hidden');
+});
+
+
